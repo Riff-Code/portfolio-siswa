@@ -4,22 +4,22 @@ export default function Skill() {
     "CSS",
     "JavaScript",
     "React",
-    "Tailwind",
+    "Tailwind CSS",
     "Fetch API",
   ];
 
   return (
     <section className="max-w-6xl mx-auto px-6 py-20">
-      <h2 className="text-3xl font-bold mb-6">Skill</h2>
+      <h2 className="text-3xl font-bold mb-10">Skill & Teknologi</h2>
 
-      <div className="flex flex-wrap gap-3">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {skills.map((skill) => (
-          <span
+          <div
             key={skill}
-            className="bg-gray-800 px-4 py-2 rounded-full text-sm"
+            className="bg-white/5 border border-white/10 p-6 rounded-2xl text-center hover:bg-white/10 transition"
           >
-            {skill}
-          </span>
+            <span className="font-semibold">{skill}</span>
+          </div>
         ))}
       </div>
     </section>

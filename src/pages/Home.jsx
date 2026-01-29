@@ -10,9 +10,9 @@ export default function Home() {
       <Skill />
 
       <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-3xl font-bold mb-8">Projects</h2>
+        <h2 className="text-3xl font-bold mb-10">Project Terbaik</h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
