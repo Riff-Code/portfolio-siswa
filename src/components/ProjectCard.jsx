@@ -1,11 +1,11 @@
 export default function ProjectCard({ project }) {
   return (
-    <div className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition-all">
-      <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-500">
+    <div className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition">
+      <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-500">
         {project.title}
       </h3>
 
-      <p className="text-gray-400 mb-5">{project.description}</p>
+      <p className="text-gray-400 mb-4">{project.description}</p>
 
       <div className="flex flex-wrap gap-2 mb-6">
         {project.tech.map((t) => (

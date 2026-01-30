@@ -1,12 +1,15 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center justify-center px-6"
+    >
       <div className="text-center max-w-3xl">
-        <span className="text-blue-500 font-semibold tracking-wide">
-          HELLO, I’M
+        <span className="text-blue-500 font-semibold tracking-widest">
+          PORTFOLIO SISWA
         </span>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold mt-4 leading-tight">
+        <h1 className="mt-6 text-5xl md:text-7xl font-extrabold">
           Muhammad <span className="text-blue-500">Arif</span>
         </h1>
 
@@ -27,7 +30,7 @@ export default function Hero() {
             href="#contact"
             className="border border-white/20 px-8 py-4 rounded-xl hover:bg-white/10 transition"
           >
-            Contact
+            Hubungi Saya
           </a>
         </div>
       </div>
