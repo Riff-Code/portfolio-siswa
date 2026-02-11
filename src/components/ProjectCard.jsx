@@ -1,39 +1,50 @@
 export default function ProjectCard({ project }) {
   return (
-    <div className="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:-translate-y-2 transition">
-      <h3 className="text-xl font-semibold mb-2 group-hover:text-blue-500">
+    <article className="group flex h-full flex-col rounded-2xl border border-white/10 bg-slate-900/65 p-6 transition hover:-translate-y-1 hover:border-cyan-300/40">
+      <div className="flex items-center justify-between gap-3">
+        <span className="rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-200">
+          {project.category}
+        </span>
+        <span className="text-xs text-slate-500">{project.year}</span>
+      </div>
+
+      <h3 className="mt-4 text-xl font-semibold text-slate-100 group-hover:text-cyan-300">
         {project.title}
       </h3>
 
-      <p className="text-gray-400 mb-4">{project.description}</p>
+      <p className="mt-3 flex-1 leading-relaxed text-slate-300">
+        {project.description}
+      </p>
 
-      <div className="flex flex-wrap gap-2 mb-6">
+      <div className="mt-4 flex flex-wrap gap-2">
         {project.tech.map((t) => (
           <span
             key={t}
-            className="text-xs bg-black/40 border border-white/10 px-3 py-1 rounded-full"
+            className="rounded-full border border-white/10 bg-slate-950 px-3 py-1 text-xs text-slate-300"
           >
             {t}
           </span>
         ))}
       </div>
 
-      <div className="flex gap-4 text-sm">
+      <div className="mt-6 flex gap-5 text-sm">
         <a
           href={project.demo}
           target="_blank"
-          className="text-blue-500 hover:underline"
+          rel="noreferrer"
+          className="font-medium text-cyan-300 hover:underline"
         >
-          Live Demo
+          Case Study
         </a>
         <a
           href={project.github}
           target="_blank"
-          className="text-gray-400 hover:underline"
+          rel="noreferrer"
+          className="text-slate-300 hover:text-white hover:underline"
         >
-          GitHub
+          Repository
         </a>
       </div>
-    </div>
+    </article>
   );
 }
