@@ -4,6 +4,13 @@ const quickStats = [
   { label: "SLA Uptime", value: "99.95%" },
 ];
 
+const highlights = [
+  "NOC Engineer - Indonesia Financial Group (IFG)",
+  "Spesialis monitoring, incident response, dan reliability",
+  "Berpengalaman Active Directory & Microsoft Entra ID",
+  "Fokus pada layanan jaringan stabil untuk kebutuhan bisnis",
+];
+
 export default function Hero() {
   return (
     <section id="hero" className="relative overflow-hidden px-6 pb-20 pt-36">
@@ -12,18 +19,18 @@ export default function Hero() {
       <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
           <p className="inline-flex rounded-full border border-sky-300 bg-sky-100 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-            Network Operations Center
+            Portfolio Pribadi NOC Engineer
           </p>
 
           <h1 className="mt-6 text-4xl font-extrabold leading-tight text-slate-900 md:text-6xl">
-            Siap bantu bisnis Anda tetap <span className="text-sky-600">online</span>,
-            aman, dan stabil 24/7.
+            Muhammad Arif Ramadhan,
+            <span className="block text-sky-600">Network Operations Engineer</span>
           </h1>
 
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-700">
-            Saya Muhammad Arif Ramadhan, NOC / Network Engineer dengan fokus pada
-            monitoring, troubleshooting, hardening, dan optimasi performa jaringan
-            enterprise untuk kebutuhan operasional dan promosi profesional.
+            Saya membantu perusahaan menjaga sistem IT tetap online, aman, dan
+            responsif melalui monitoring proaktif, troubleshooting terarah, serta
+            perbaikan berkelanjutan untuk kebutuhan operasional bisnis.
           </p>
 
           <div className="mt-9 flex flex-wrap gap-4">
@@ -37,7 +44,7 @@ export default function Hero() {
               href="#contact"
               className="rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-800 transition hover:border-sky-400 hover:text-sky-700"
             >
-              Konsultasi Gratis
+              Hubungi Saya
             </a>
           </div>
 
@@ -58,25 +65,30 @@ export default function Hero() {
           <div className="network-glow absolute -left-10 -top-10 h-40 w-40 rounded-full bg-sky-300/30 blur-3xl" />
           <div className="network-glow absolute -bottom-10 -right-8 h-40 w-40 rounded-full bg-indigo-300/30 blur-3xl" />
 
-          <div className="relative rounded-3xl border border-white/70 bg-white/80 p-6 shadow-2xl shadow-sky-100 backdrop-blur">
+          <div className="relative rounded-3xl border border-white/70 bg-white/85 p-6 shadow-2xl shadow-sky-100 backdrop-blur">
             <div className="mb-5 flex items-center justify-between">
               <p className="text-sm font-semibold uppercase tracking-[0.18em] text-sky-600">
-                Live Monitoring
+                Profil Singkat
               </p>
-              <span className="rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">
-                All Systems Normal
+              <span className="rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700">
+                Open to Work
               </span>
             </div>
 
-            <div className="space-y-4">
-              {["Core Router", "Firewall", "WAN Link", "VPN Gateway"].map((item, index) => (
+            <div className="mb-5 rounded-2xl border border-sky-100 bg-gradient-to-r from-sky-50 to-indigo-50 p-4">
+              <p className="text-lg font-bold text-slate-900">Muhammad Arif Ramadhan</p>
+              <p className="text-sm text-slate-600">NOC / Network Engineer - Jakarta</p>
+            </div>
+
+            <div className="space-y-3">
+              {highlights.map((item, index) => (
                 <div
                   key={item}
-                  className="network-card flex items-center justify-between rounded-xl border border-sky-100 bg-white p-4"
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="network-card flex items-center gap-3 rounded-xl border border-sky-100 bg-white p-4"
+                  style={{ animationDelay: `${index * 0.18}s` }}
                 >
-                  <span className="font-medium text-slate-700">{item}</span>
-                  <span className="text-xs font-semibold text-emerald-600">UP</span>
+                  <span className="h-2 w-2 shrink-0 rounded-full bg-sky-500" />
+                  <p className="text-sm font-medium text-slate-700">{item}</p>
                 </div>
               ))}
             </div>
