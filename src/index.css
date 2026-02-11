@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950 text-gray-100;
+  @apply min-h-screen bg-slate-950 text-slate-100 antialiased;
+  font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 section {
