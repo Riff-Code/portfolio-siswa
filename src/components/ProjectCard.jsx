@@ -1,30 +1,47 @@
 export default function ProjectCard({ project }) {
   return (
-    <article className="group flex h-full flex-col rounded-2xl border border-sky-100 bg-white p-6 shadow-md shadow-slate-100 transition hover:-translate-y-1 hover:shadow-lg">
+    <article className="group flex h-full flex-col rounded-2xl border border-white/10 bg-slate-900/65 p-6 transition hover:-translate-y-1 hover:border-cyan-300/40">
       <div className="flex items-center justify-between gap-3">
-        <span className="rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700">
+        <span className="rounded-full border border-cyan-300/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-200">
           {project.category}
         </span>
         <span className="text-xs text-slate-500">{project.year}</span>
       </div>
 
-      <h3 className="mt-4 text-xl font-bold text-slate-900 group-hover:text-sky-600">{project.title}</h3>
+      <h3 className="mt-4 text-xl font-semibold text-slate-100 group-hover:text-cyan-300">
+        {project.title}
+      </h3>
 
-      <p className="mt-3 flex-1 leading-relaxed text-slate-600">{project.description}</p>
+      <p className="mt-3 flex-1 leading-relaxed text-slate-300">
+        {project.description}
+      </p>
 
       <div className="mt-4 flex flex-wrap gap-2">
-        {project.tech.map((tech) => (
-          <span key={tech} className="rounded-full border border-sky-100 bg-slate-50 px-3 py-1 text-xs text-slate-600">
-            {tech}
+        {project.tech.map((t) => (
+          <span
+            key={t}
+            className="rounded-full border border-white/10 bg-slate-950 px-3 py-1 text-xs text-slate-300"
+          >
+            {t}
           </span>
         ))}
       </div>
 
       <div className="mt-6 flex gap-5 text-sm">
-        <a href={project.demo} target="_blank" rel="noreferrer" className="font-semibold text-sky-600 hover:underline">
+        <a
+          href={project.demo}
+          target="_blank"
+          rel="noreferrer"
+          className="font-medium text-cyan-300 hover:underline"
+        >
           Case Study
         </a>
-        <a href={project.github} target="_blank" rel="noreferrer" className="font-medium text-slate-600 hover:text-slate-900 hover:underline">
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noreferrer"
+          className="text-slate-300 hover:text-white hover:underline"
+        >
           Repository
         </a>
       </div>

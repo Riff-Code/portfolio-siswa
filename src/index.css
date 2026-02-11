@@ -2,45 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply min-h-screen bg-slate-50 text-slate-800 antialiased;
+  @apply min-h-screen bg-slate-950 text-slate-100 antialiased;
   font-family: "Inter", "Segoe UI", sans-serif;
 }
 
 section {
   @apply scroll-mt-24;
-}
-
-@keyframes float-card {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes ping-soft {
-  0%,
-  100% {
-    opacity: 0.45;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-}
-
-.animate-float-card {
-  animation: float-card 4s ease-in-out infinite;
-}
-
-.animate-ping-soft {
-  animation: ping-soft 2.2s ease-in-out infinite;
 }

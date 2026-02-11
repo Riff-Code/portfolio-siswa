@@ -1,89 +1,88 @@
-const skillGroups = [
-  {
-    title: "Network Operations",
-    points: ["NOC Monitoring", "Incident Management", "RCA & Escalation"],
-    color: "from-sky-100 to-cyan-100",
-  },
+const focusAreas = [
   {
     title: "Routing & Switching",
-    points: ["BGP / OSPF", "VLAN & STP", "High Availability"],
-    color: "from-indigo-100 to-blue-100",
+    points: ["OSPF / BGP", "VLAN Segmentation", "HSRP & Redundancy"],
   },
   {
-    title: "Security",
-    points: ["Firewall Policy", "VPN IPsec", "Identity Access (Entra ID)"],
-    color: "from-emerald-100 to-cyan-100",
+    title: "Security & Access",
+    points: ["Firewall Policy", "Site-to-Site VPN", "Zero Trust Access"],
   },
   {
-    title: "Tools",
-    points: ["Zabbix", "Grafana", "Wireshark & PRTG"],
-    color: "from-orange-100 to-yellow-100",
+    title: "Cloud & Automation",
+    points: ["Terraform Basic", "Ansible Playbook", "NetBox & API"],
+  },
+  {
+    title: "Monitoring & Reliability",
+    points: ["Zabbix / Grafana", "Capacity Planning", "Incident Response"],
   },
 ];
 
 const certifications = [
-  "Alibaba Cloud Certified Associate",
-  "Cyber Security Awareness",
-  "Network Monitoring Fundamentals",
-  "Google IT Support Professional",
+  "Cisco CCNA",
+  "MTCNA MikroTik",
+  "Fortinet NSE 1-2",
 ];
 
 export default function Skill() {
   return (
     <>
-      <section id="about" className="mx-auto w-full max-w-6xl px-4 py-16 md:px-6 md:py-20">
-        <div className="rounded-3xl border border-sky-100 bg-white p-8 shadow-lg shadow-sky-100/80 md:p-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-sky-600">About Me</p>
-          <h2 className="mt-3 text-3xl font-black text-slate-900 md:text-4xl">
-            Network Engineer dengan pendekatan proaktif dan human-centered.
+      <section id="about" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="rounded-2xl border border-white/10 bg-slate-900/70 p-8 md:p-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-cyan-300">
+            Tentang Saya
+          </p>
+          <h2 className="mt-3 text-3xl font-bold text-slate-100 md:text-4xl">
+            Engineer dengan pendekatan business-first.
           </h2>
-          <p className="mt-4 max-w-4xl leading-relaxed text-slate-600">
-            Berpengalaman di lingkungan enterprise untuk melakukan monitoring infrastruktur,
-            troubleshooting, dan memastikan layanan IT berjalan stabil. Saya terbiasa
-            berkolaborasi lintas tim untuk meningkatkan availability, mengurangi downtime,
-            dan menjaga standar keamanan operasional harian.
+          <p className="mt-5 max-w-4xl leading-relaxed text-slate-300">
+            Saya percaya infrastruktur jaringan bukan sekadar konfigurasi
+            perangkat, tetapi fondasi operasional bisnis. Setiap project saya
+            kerjakan dengan target jelas: latency rendah, uptime tinggi, dan
+            keamanan yang bisa diaudit. Saya terbiasa bekerja lintas tim IT,
+            security, dan manajemen untuk memastikan implementasi berjalan rapi
+            dari planning sampai handover dokumentasi.
           </p>
         </div>
       </section>
 
-      <section id="skills" className="mx-auto w-full max-w-6xl px-4 pb-16 md:px-6 md:pb-20">
-        <div className="mb-8">
-          <h2 className="text-3xl font-black text-slate-900">Skill Section</h2>
-          <p className="mt-2 text-slate-600">Kemampuan teknis utama untuk role NOC / Network Engineer.</p>
+      <section id="skills" className="mx-auto max-w-6xl px-6 pb-20">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <h2 className="text-3xl font-bold text-slate-100">Keahlian Utama</h2>
+            <p className="mt-2 text-slate-400">
+              Kombinasi skill teknis dan operasional untuk lingkungan enterprise.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {certifications.map((cert) => (
+              <span
+                key={cert}
+                className="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-3 py-1 text-xs font-medium text-cyan-100"
+              >
+                {cert}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="grid gap-5 md:grid-cols-2">
-          {skillGroups.map((group) => (
+          {focusAreas.map((area) => (
             <article
-              key={group.title}
-              className={`rounded-2xl border border-white bg-gradient-to-br ${group.color} p-6 shadow-md shadow-slate-100 transition hover:-translate-y-1`}
+              key={area.title}
+              className="rounded-2xl border border-white/10 bg-slate-900/60 p-6"
             >
-              <h3 className="text-xl font-bold text-slate-800">{group.title}</h3>
-              <ul className="mt-4 space-y-2 text-sm text-slate-700">
-                {group.points.map((point) => (
+              <h3 className="text-xl font-semibold text-slate-100">{area.title}</h3>
+              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                {area.points.map((point) => (
                   <li key={point} className="flex items-center gap-2">
-                    <span className="h-2 w-2 rounded-full bg-sky-500" />
+                    <span className="h-1.5 w-1.5 rounded-full bg-cyan-300" />
                     {point}
                   </li>
                 ))}
               </ul>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section id="certification" className="mx-auto w-full max-w-6xl px-4 pb-20 md:px-6">
-        <div className="rounded-3xl border border-indigo-100 bg-gradient-to-r from-indigo-50 to-cyan-50 p-8 md:p-10">
-          <h2 className="text-3xl font-black text-slate-900">Certification Section</h2>
-          <p className="mt-2 text-slate-600">Sertifikasi profesional yang menunjang kapabilitas saya.</p>
-
-          <div className="mt-6 grid gap-3 sm:grid-cols-2">
-            {certifications.map((cert) => (
-              <div key={cert} className="rounded-xl border border-indigo-100 bg-white/90 px-4 py-3 text-sm font-medium text-slate-700">
-                {cert}
-              </div>
-            ))}
-          </div>
         </div>
       </section>
     </>
